@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Society Survey</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Society Survey & Representative Election Management System</h1>
+
+    <nav>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="survey.html">Survey</a></li>
+            <li><a href="polls.html">Polls</a></li>
+            <li><a href="vote.html">Vote</a></li>
+            <li><a href="candidates.html">Candidates</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <h2 style="text-align:center; margin-bottom:20px;">
+        Society Feedback Survey
+    </h2>
+
+    <form id="surveyForm">
+
+        <fieldset>
+            <legend>Cleanliness Satisfaction</legend>
+
+            <label><input type="radio" name="cleanliness"> Excellent</label>
+            <label><input type="radio" name="cleanliness"> Good</label>
+            <label><input type="radio" name="cleanliness"> Average</label>
+            <label><input type="radio" name="cleanliness"> Poor</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Security Service Feedback</legend>
+
+            <label><input type="radio" name="security"> Excellent</label>
+            <label><input type="radio" name="security"> Good</label>
+            <label><input type="radio" name="security"> Average</label>
+            <label><input type="radio" name="security"> Poor</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Parking Issues</legend>
+
+            <label><input type="checkbox"> Lack of Parking Space</label>
+            <label><input type="checkbox"> Unauthorized Parking</label>
+            <label><input type="checkbox"> Visitor Parking Problems</label>
+        </fieldset>
+
+        <label for="water">Water Supply Feedback</label>
+        <select id="water">
+            <option>Select Option</option>
+            <option>Excellent</option>
+            <option>Good</option>
+            <option>Average</option>
+            <option>Poor</option>
+        </select>
+
+        <label for="maintenance">Maintenance Quality</label>
+        <select id="maintenance">
+            <option>Select Option</option>
+            <option>Excellent</option>
+            <option>Good</option>
+            <option>Average</option>
+            <option>Poor</option>
+        </select>
+
+        <label for="suggestion">Suggestions</label>
+        <textarea id="suggestion" rows="5"></textarea>
+
+        <br>
+
+        <button type="submit">
+            Submit Survey
+        </button>
+
+    </form>
+
+</main>
+
+<footer>
+    <p>
+        © 2026 Society Survey & Representative Election Management System
+    </p>
+</footer>
+
+</body>
+</html>
