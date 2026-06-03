@@ -83,7 +83,7 @@ input[type="submit"]{
 
 button:hover,
 input[type="submit"]:hover{
-    background:#388e3c;
+    background:#0d1dc8;
 }
 
 /* FORMS */
@@ -272,6 +272,69 @@ footer{
 }
 .hero{
     animation:fadeIn 1s ease-in-out;
+}
+.con{
+    background-color: #2196F3;
+    width: 20px;
+    animation: rota 5s ease infinite;
+}
+#bu{
+    background-color: #ff9800;
+    /* width: 20px;
+    height: 40px; */
+    animation:but 10s ease infinite reverse;
+    position: relative;
+}
+@keyframes but {
+    0%{
+        background-color: aqua;
+        /* width: ;
+        height: 20px; */
+        left: 0px;
+    }
+    10%{
+        transform: rotate(36deg);
+        background-color: #ff5722;
+        left: 360px;
+        /* width: 20px;
+        height: 40px; */
+    }
+    20%{
+        transform: rotate(72deg);
+        background-color: #ff9800;
+        left: 720px;
+        top: 300px;
+        /* width: 40px;
+        height: 20px; */
+    }
+    50%{
+        transform: rotate(180deg);
+        background-color: #ff5722;
+        left: 1080px;
+        top: 600px;
+        right: 50px;
+        /* width: 20px;
+        height: 40px; */
+    }
+}
+@keyframes rota {
+    0%{
+        transform: rotate(0deg);
+    }
+    10%{
+        transform: rotate(36deg);
+        background-color: #1976D2;
+    }
+    20%{
+        transform: rotate(72deg);
+        background-color: #2196F3;
+    }
+    50%{
+        transform: rotate(180deg);
+        background-color: #1976D2;
+    }
+
+    
 }
 @media(max-width:768px){
 
