@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - CVR College of Engineering</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .about-card {
+            border: none;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        .about-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 1rem 3rem rgba(0,0,0,0.1) !important;
+        }
+        .about-img {
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Responsive Header Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-maroon py-3 shadow">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <span class="fw-bold fs-4">CVR College of Engineering</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Courses
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark bg-maroon border-0" aria-labelledby="coursesDropdown">
+                            <li><a class="dropdown-item" href="courses.html#CSE">CSE</a></li>
+                            <li><a class="dropdown-item" href="courses.html#ECE">ECE</a></li>
+                            <li><a class="dropdown-item" href="courses.html#IT">IT</a></li>
+                            <li><a class="dropdown-item" href="courses.html#EEE">EEE</a></li>
+                            <li><a class="dropdown-item" href="courses.html#MECH">MECH</a></li>
+                            <li><a class="dropdown-item" href="courses.html#CIVIL">CIVIL</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="StudentDashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <button class="btn theme-toggle-btn" id="themeToggle" title="Toggle Theme">
+                            <span id="themeIcon">☀️</span>
+                        </button>
+                    </li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <button class="btn btn-warning px-4 rounded-pill fw-bold shadow-sm" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main About Content -->
+    <main class="container my-5 flex-grow-1">
+        <h2 class="text-center fw-bold mb-5">About CVR College of Engineering</h2>
+
+        <div class="row align-items-center mb-5 g-5">
+            <div class="col-12 col-lg-6 text-center">
+                <img src="https://cvr.ac.in/home4/images/college-aerial-view.jpg" class="img-fluid about-img shadow-lg" alt="CVR Campus">
+            </div>
+            <div class="col-12 col-lg-6">
+                <h3 class="fw-bold mb-3 text-maroon">Excellence in Engineering Education</h3>
+                <p class="lead text-muted">
+                    CVR College of Engineering was established in 2001 and is held in high academic esteem. We are dedicated to delivering state-of-the-art laboratory spaces, active research opportunities, and robust corporate placement cycles.
+                </p>
+                <p class="text-muted">
+                    Offering NBA-accredited courses across multiple departments, the campus hosts modern student computing infrastructure, experienced professors, and dynamic project collaboration groups. We focus on preparing professional graduates ready to solve contemporary technological challenges.
+                </p>
+            </div>
+        </div>
+
+        <!-- Vision, Mission, Values Grid -->
+        <div class="row g-4 mb-5">
+            <div class="col-12 col-md-4">
+                <div class="card about-card shadow-sm h-100 border text-center p-4">
+                    <div class="card-body">
+                        <h4 class="fw-bold text-maroon mb-3">Our Vision</h4>
+                        <p class="text-muted m-0">To be a premier technology institution nurturing advanced computer research, industrial leadership, and project-oriented engineering education.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card about-card shadow-sm h-100 border text-center p-4">
+                    <div class="card-body">
+                        <h4 class="fw-bold text-maroon mb-3">Our Mission</h4>
+                        <p class="text-muted m-0">To deliver quality theoretical knowledge combined with practical experiments, producing industry-ready coders and engineers.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card about-card shadow-sm h-100 border text-center p-4">
+                    <div class="card-body">
+                        <h4 class="fw-bold text-maroon mb-3">Core Values</h4>
+                        <p class="text-muted m-0">Focus on transparency, ethical academic practices, environmental preservation, team leadership, and lifelong skill learning.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-maroon text-white">
+                    <h5 class="modal-title fw-bold" id="loginModalLabel">Portal Login</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form action="StudentDashboard.html" method="get">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Email Address / Username</label>
+                            <input type="text" class="form-control" id="username" required placeholder="Enter student email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" required placeholder="Enter portal password">
+                        </div>
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember Session</label>
+                        </div>
+                        <button type="submit" class="btn btn-maroon w-100 rounded-pill py-2 fw-bold">Sign In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-white text-center py-4 bg-maroon mt-auto">
+        <div class="container">
+            <p class="mb-2">© 2026 CVR College of Engineering. All Rights Reserved.</p>
+            <div>
+                <a href="#" class="text-white text-decoration-none mx-2">Facebook</a>
+                <a href="#" class="text-white text-decoration-none mx-2">Instagram</a>
+                <a href="#" class="text-white text-decoration-none mx-2">Twitter</a>
+                <a href="#" class="text-white text-decoration-none mx-2">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Theme Switcher Logic
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        
+        const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-bs-theme', currentTheme);
+        updateThemeIcon(currentTheme);
+        
+        themeToggle.addEventListener('click', () => {
+            const activeTheme = document.documentElement.getAttribute('data-bs-theme');
+            const newTheme = activeTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-bs-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+        
+        function updateThemeIcon(theme) {
+            if (theme === 'dark') {
+                themeIcon.textContent = '🌙';
+            } else {
+                themeIcon.textContent = '☀️';
+            }
+        }
+    </script>
+</body>
+</html>

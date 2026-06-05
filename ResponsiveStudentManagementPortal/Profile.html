@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - CVR College of Engineering</title>
+    <title>Student Profile - CVR College of Engineering Portal</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -12,10 +12,22 @@
             background-color: #f8f9fa;
         }
 
-        .contact-card {
+        .profile-card {
             border: none;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-img-main {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #800000;
+        }
+
+        [data-bs-theme="dark"] .profile-img-main {
+            border-color: #ffc107;
         }
     </style>
 </head>
@@ -54,7 +66,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="contact.html">Contact</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="StudentDashboard.html">Dashboard</a>
@@ -73,66 +85,113 @@
         </div>
     </nav>
     <main class="container my-5 flex-grow-1">
-        <h2 class="text-center fw-bold mb-4">Contact Us</h2>
-        <div class="alert alert-success d-flex align-items-center shadow-sm mb-5 mx-auto" style="max-width: 800px;"
-            role="alert">
-            <span class="fs-4 me-3">✉️</span>
-            <div>
-                Have queries regarding engineering admissions, results, or course structures? Submit your enquiry
-                details below. We typically respond within 24 business hours.
-            </div>
-        </div>
+        <h2 class="text-center fw-bold mb-5">Student Profile & Identity</h2>
 
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-10 col-lg-8">
-                <div class="card contact-card shadow-lg border">
-                    <div class="card-body p-4 p-md-5">
-                        <form class="needs-validation" novalidate id="contactForm">
-                            <div class="row g-3">
-                                <div class="col-12 col-sm-6">
-                                    <label for="contactName" class="form-label fw-semibold">Your Name</label>
-                                    <input type="text" class="form-control" id="contactName" placeholder="Enter name"
-                                        required>
-                                    <div class="invalid-feedback">Please enter your name.</div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="contactEmail" class="form-label fw-semibold">Your Email</label>
-                                    <input type="email" class="form-control" id="contactEmail"
-                                        placeholder="name@example.com" required>
-                                    <div class="invalid-feedback">Please enter a valid email address.</div>
-                                </div>
+        <div class="row g-5 align-items-stretch">
+            <div class="col-12 col-lg-7">
+                <div class="card profile-card h-100 shadow-lg border">
+                    <div class="card-body p-4 p-md-5 text-center">
+                        <div class="mb-4">
+                            <img src="charan copy.jpeg" alt="Charan Profile" class="profile-img-main shadow-sm">
+                        </div>
+                        <h3 class="fw-bold mb-1">Charan</h3>
+                        <p class="text-muted mb-4">Roll No: 23B81A05CF | CSE Department</p>
+                        <hr class="my-4">
 
-                                <div class="col-12">
-                                    <label for="contactSubject" class="form-label fw-semibold">Subject</label>
-                                    <input type="text" class="form-control" id="contactSubject"
-                                        placeholder="Enquiry subject" required>
-                                    <div class="invalid-feedback">Please provide a subject.</div>
-                                </div>
-                                <div class="col-12">
-                                    <label for="contactMessage" class="form-label fw-semibold">Message</label>
-                                    <textarea class="form-control" id="contactMessage" rows="5"
-                                        placeholder="Detail your query here..." required></textarea>
-                                    <div class="invalid-feedback">Please enter a message.</div>
-                                </div>
+                        <div class="row text-start g-3">
+                            <div class="col-12 col-sm-6">
+                                <span class="text-muted d-block small fw-semibold">ROLL NUMBER</span>
+                                <span class="fw-bold">23B81A05CF</span>
                             </div>
-                            <div class="text-center mt-4">
-                                <button type="submit"
-                                    class="btn btn-maroon px-5 py-2.5 rounded-pill fw-bold shadow">Send Message</button>
-                                <button type="reset"
-                                    class="btn btn-secondary px-5 py-2.5 rounded-pill fw-bold ms-3 shadow-sm">Reset</button>
+                            <div class="col-12 col-sm-6">
+                                <span class="text-muted d-block small fw-semibold">BRANCH</span>
+                                <span class="fw-bold">Computer Science & Engineering</span>
                             </div>
-                        </form>
+                            <div class="col-12 col-sm-6">
+                                <span class="text-muted d-block small fw-semibold">EMAIL ADDRESS</span>
+                                <span class="fw-bold">charan@gmail.com</span>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <span class="text-muted d-block small fw-semibold">MOBILE NUMBER</span>
+                                <span class="fw-bold">9876543210</span>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <span class="text-muted d-block small fw-semibold">GENDER</span>
+                                <span class="fw-bold">Male</span>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <span class="text-muted d-block small fw-semibold">DATE OF BIRTH</span>
+                                <span class="fw-bold">June 12, 2004</span>
+                            </div>
+                            <div class="col-12">
+                                <span class="text-muted d-block small fw-semibold">RESIDENTIAL ADDRESS</span>
+                                <span class="fw-bold">H.No: 4-12/A, Ibrahimpatnam, Hyderabad, Pin Code: 501510</span>
+                            </div>
+                        </div>
 
-                        <div class="alert alert-success d-none mt-4 text-center" id="successSubmitAlert">
-                            🎉 <strong>Success!</strong> Your message has been sent successfully. We will contact you
-                            soon.
+                        <div class="mt-5">
+                            <a href="StudentDashboard.html" class="btn btn-maroon px-4 py-2 rounded-pill fw-bold">Back
+                                to Dashboard</a>
+                            <button class="btn btn-outline-secondary px-4 py-2 rounded-pill fw-bold ms-3"
+                                onclick="window.print()">Print profile</button>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="col-12 col-lg-5 d-flex align-items-center justify-content-center">
+                <div class="w-100 text-center">
+                    <h5 class="fw-bold text-muted mb-3">Generated College ID Card</h5>
+                    <div class="id-card text-start border">
+                        <div class="id-card-header text-center">
+                            <h6 class="fw-bold m-0 tracking-wide">CVR COLLEGE OF ENGINEERING</h6>
+                            <small class="text-white-50" style="font-size: 0.7rem;">An Autonomous Institution</small>
+                        </div>
+
+                        <div class="id-card-body text-center">
+                            <div class="id-photo-container shadow-sm">
+                                <img src="charan copy.jpeg" alt="ID Card photo">
+                            </div>
+
+                            <h5 class="fw-bold text-dark mb-1">CHARAN</h5>
+                            <span class="badge bg-maroon px-3 py-1 rounded-pill mb-3">STUDENT</span>
+
+                            <div class="id-details text-start mx-auto" style="max-width: 280px;">
+                                <table class="table table-borderless text-dark m-0">
+                                    <tbody>
+                                        <tr>
+                                            <td class="fw-semibold text-muted py-1" style="width: 40%;">Roll No:</td>
+                                            <td class="fw-bold py-1">23B81A05CF</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-semibold text-muted py-1">Branch:</td>
+                                            <td class="fw-bold py-1">CSE</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-semibold text-muted py-1">Mobile:</td>
+                                            <td class="fw-bold py-1">9876543210</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-semibold text-muted py-1">Validity:</td>
+                                            <td class="fw-bold py-1 text-success">2023 - 2027</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="id-card-footer text-center">
+                            <div class="barcode"></div>
+                            <small class="text-muted d-block mt-2" style="font-size: 0.65rem;">If found, return to:
+                                Ibrahimpatnam, RR Dist, Telangana - 501510</small>
+                        </div>
+                    </div>
+
+                    <p class="text-muted small mt-3">This badge card represents official digital student authorization
+                        for academic year 2026/27.</p>
+                </div>
+            </div>
         </div>
     </main>
-
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -163,8 +222,7 @@
             </div>
         </div>
     </div>
-
-    <footer class="text-white text-center py-4 bg-maroon mt-auto">
+    <footer class="text-white text-center py-4 bg-maroon">
         <div class="container">
             <p class="mb-2">© 2026 CVR College of Engineering. All Rights Reserved.</p>
             <div>
@@ -178,31 +236,13 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        (() => {
-            'use strict';
-            const form = document.getElementById('contactForm');
-            const successAlert = document.getElementById('successSubmitAlert');
-
-            form.addEventListener('submit', event => {
-                event.preventDefault();
-                if (!form.checkValidity()) {
-                    event.stopPropagation();
-                    form.classList.add('was-validated');
-                } else {
-                    form.classList.remove('was-validated');
-                    successAlert.classList.remove('d-none');
-                    form.reset();
-                    setTimeout(() => {
-                        successAlert.classList.add('d-none');
-                    }, 5000);
-                }
-            }, false);
-        })();
         const themeToggle = document.getElementById('themeToggle');
         const themeIcon = document.getElementById('themeIcon');
+
         const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
         document.documentElement.setAttribute('data-bs-theme', currentTheme);
         updateThemeIcon(currentTheme);
+
         themeToggle.addEventListener('click', () => {
             const activeTheme = document.documentElement.getAttribute('data-bs-theme');
             const newTheme = activeTheme === 'dark' ? 'light' : 'dark';
