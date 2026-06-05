@@ -250,6 +250,9 @@ table th{
     background:#ff9800;
 }
 
+#bu{
+    transition: background-color 0.3s, transform 0.3s;
+}
 /* CONTACT PAGE */
 #office-info{
     margin-top:25px;
@@ -317,6 +320,7 @@ footer{
         height: 40px; */
     }
 }
+
 @keyframes rota {
     0%{
         transform: rotate(0deg);
