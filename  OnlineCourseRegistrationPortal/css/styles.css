@@ -53,3 +53,7 @@ footer p {
 .nav-link {
     font-weight: 500;
 }
+.card img {
+    height: 250px;
+    object-fit: cover;
+}
