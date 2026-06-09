@@ -110,8 +110,7 @@ The project demonstrates the implementation of major Bootstrap components while 
 
 ## GitHub Repository Link
 
-https://github.com/yourusername/college-event-management
-
+https://github.com/BonagiriCharan22/FSD/tree/main/CollegeEventManagement
 ## Project Structure
 
 college-event-management/
