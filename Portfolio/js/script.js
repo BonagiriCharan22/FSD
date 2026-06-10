@@ -18,11 +18,13 @@ document
         name==="" ||
         email==="" ||
         subject==="" ||
-        message===""){
-        
+        message===""
+    ){
+
         alert("Please fill all fields");
 
         e.preventDefault();
+
     }
 
 });
