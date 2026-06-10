@@ -21,3 +21,24 @@ section{
     font-weight:bold;
     margin-bottom:50px;
 }
+.home-section{
+    background:#f8f9fa;
+}
+
+.profile-img{
+    width:320px;
+    height:320px;
+    object-fit:cover;
+    border-radius:50%;
+    border:8px solid white;
+    box-shadow:0 0 25px rgba(0,0,0,0.15);
+}
+
+.home-section h1{
+    margin-bottom:10px;
+}
+
+.home-section p{
+    margin:20px 0;
+    line-height:1.8;
+}
