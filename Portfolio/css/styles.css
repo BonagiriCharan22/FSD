@@ -33,7 +33,23 @@ section{
     border:8px solid white;
     box-shadow:0 0 25px rgba(0,0,0,0.15);
 }
+#skills .card{
+    border:none;
+    transition:0.3s;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
 
+#skills .card:hover{
+    transform:translateY(-5px);
+}
+
+.progress{
+    height:25px;
+}
+
+.progress-bar{
+    font-weight:600;
+}
 .home-section h1{
     margin-bottom:10px;
 }
@@ -49,4 +65,18 @@ section{
 #about .card{
     border:none;
     box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+.project-card{
+    border:none;
+    transition:0.3s;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.project-card:hover{
+    transform:translateY(-5px);
+}
+
+.project-card .card-title{
+    font-weight:600;
+    margin-bottom:15px;
 }
