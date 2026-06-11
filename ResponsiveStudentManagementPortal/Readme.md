@@ -63,7 +63,6 @@ The application is fully responsive and adapts seamlessly across mobile, tablet,
 * Values
 * Accordion Component
 
-### Contact Us Page
 
 * Name
 * Email
@@ -71,10 +70,6 @@ The application is fully responsive and adapts seamlessly across mobile, tablet,
 * Message
 * Alert Messages
 * Contact Form
-
----
-
-## Bootstrap Components Used
 
 | Component   | Usage                        |
 | ----------- | ---------------------------- |
@@ -92,8 +87,6 @@ The application is fully responsive and adapts seamlessly across mobile, tablet,
 | Accordion   | About Page                   |
 | Modal       | Student Profile              |
 | Carousel    | Home Page                    |
-
----
 
 ## Responsive Design
 
