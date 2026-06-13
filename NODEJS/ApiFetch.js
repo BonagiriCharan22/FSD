@@ -1,6 +1,6 @@
 const https = require("https");
 
-const API_KEY = "45210677d46e43cb8d180646261306";
+const API_KEY = "....";
 const CITY = "Hyderabad";
 
 https.get(
