@@ -1,0 +1,10 @@
+{
+  "greeting": "Hello from hi.json",
+  "language": "en",
+  "timestamp": "2026-06-16T00:00:00Z",
+  "version": "1.0.0",
+  "users": [
+    { "id": 1, "name": "Nikhita" },
+    { "id": 2, "name": "Bona" }
+  ]
+}
