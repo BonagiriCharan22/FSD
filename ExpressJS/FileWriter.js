@@ -11,6 +11,7 @@ const DATA_FILE = path.join(__dirname, 'hi.json');
 async function readStore() {
   try {
     const raw = await fs.readFile(DATA_FILE, 'utf8');
+    console.log('Raw data read from file:', raw);
     const parsed = JSON.parse(raw);
     if (Array.isArray(parsed)) return { file: parsed, root: parsed, wrapper: null };
     return { file: parsed, root: parsed.users || [], wrapper: parsed };
