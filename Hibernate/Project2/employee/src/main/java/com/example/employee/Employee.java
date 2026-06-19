@@ -1,9 +1,12 @@
 package com.example.employee;
 
-import java.sql.Date;
+import java.util.Date;
+
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 
 @Entity
 public class Employee {
@@ -12,6 +15,7 @@ public class Employee {
 	private String employe_name;
 	private String department;
 	private double salary;
+	@Temporal(TemporalType.DATE)
 	private Date joiningDate;
 	public void setDepartment(String department) {
 		this.department = department;
