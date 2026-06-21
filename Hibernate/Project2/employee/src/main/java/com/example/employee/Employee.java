@@ -15,7 +15,6 @@ public class Employee {
 	private String employe_name;
 	private String department;
 	private double salary;
-	@Temporal(TemporalType.DATE)
 	private Date joiningDate;
 	public void setDepartment(String department) {
 		this.department = department;
