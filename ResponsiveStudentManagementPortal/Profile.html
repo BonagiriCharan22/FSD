@@ -88,40 +88,40 @@
                 <div class="card profile-card h-100 shadow-lg border">
                     <div class="card-body p-4 p-md-5 text-center">
                         <div class="mb-4">
-                            <img src="charan copy.jpeg" alt="Charan Profile" class="profile-img-main shadow-sm">
+                            <img src="charan copy.jpeg" alt="Charan Profile" class="profile-img-main shadow-sm" id="profileImage">
                         </div>
-                        <h3 class="fw-bold mb-1">Charan</h3>
-                        <p class="text-muted mb-4">Roll No: 23B81A05CF | CSE Department</p>
+                        <h3 class="fw-bold mb-1" id="profileName">Charan</h3>
+                        <p class="text-muted mb-4" id="profileSubtitle">Roll No: 23B81A05CF | CSE Department</p>
                         <hr class="my-4">
 
                         <div class="row text-start g-3">
                             <div class="col-12 col-sm-6">
                                 <span class="text-muted d-block small fw-semibold">ROLL NUMBER</span>
-                                <span class="fw-bold">23B81A05CF</span>
+                                <span class="fw-bold" id="detailRollNumber">23B81A05CF</span>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <span class="text-muted d-block small fw-semibold">BRANCH</span>
-                                <span class="fw-bold">Computer Science & Engineering</span>
+                                <span class="fw-bold" id="detailBranch">Computer Science & Engineering</span>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <span class="text-muted d-block small fw-semibold">EMAIL ADDRESS</span>
-                                <span class="fw-bold">charan@gmail.com</span>
+                                <span class="fw-bold" id="detailEmail">charan@gmail.com</span>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <span class="text-muted d-block small fw-semibold">MOBILE NUMBER</span>
-                                <span class="fw-bold">9876543210</span>
+                                <span class="fw-bold" id="detailMobile">9876543210</span>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <span class="text-muted d-block small fw-semibold">GENDER</span>
-                                <span class="fw-bold">Male</span>
+                                <span class="fw-bold" id="detailGender">Male</span>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <span class="text-muted d-block small fw-semibold">DATE OF BIRTH</span>
-                                <span class="fw-bold">June 12, 2004</span>
+                                <span class="fw-bold" id="detailDob">June 12, 2004</span>
                             </div>
                             <div class="col-12">
                                 <span class="text-muted d-block small fw-semibold">RESIDENTIAL ADDRESS</span>
-                                <span class="fw-bold">H.No: 4-12/A, Ibrahimpatnam, Hyderabad, Pin Code: 501510</span>
+                                <span class="fw-bold" id="detailAddress">H.No: 4-12/A, Ibrahimpatnam, Hyderabad, Pin Code: 501510</span>
                             </div>
                         </div>
 
@@ -145,10 +145,10 @@
 
                         <div class="id-card-body text-center">
                             <div class="id-photo-container shadow-sm">
-                                <img src="charan copy.jpeg" alt="ID Card photo">
+                                <img src="charan copy.jpeg" alt="ID Card photo" id="cardImage">
                             </div>
 
-                            <h5 class="fw-bold mb-1">CHARAN</h5>
+                            <h5 class="fw-bold mb-1" id="cardName">CHARAN</h5>
                             <span class="badge bg-maroon px-3 py-1 rounded-pill mb-3">STUDENT</span>
 
                             <div class="id-details text-start mx-auto" style="max-width: 280px;">
@@ -156,19 +156,19 @@
                                     <tbody>
                                         <tr>
                                             <td class="fw-semibold text-muted py-1" style="width: 40%;">Roll No:</td>
-                                            <td class="fw-bold py-1">23B81A05CF</td>
+                                            <td class="fw-bold py-1" id="cardRollNumber">23B81A05CF</td>
                                         </tr>
                                         <tr>
                                             <td class="fw-semibold text-muted py-1">Branch:</td>
-                                            <td class="fw-bold py-1">CSE</td>
+                                            <td class="fw-bold py-1" id="cardBranch">CSE</td>
                                         </tr>
                                         <tr>
                                             <td class="fw-semibold text-muted py-1">Mobile:</td>
-                                            <td class="fw-bold py-1">9876543210</td>
+                                            <td class="fw-bold py-1" id="cardMobile">9876543210</td>
                                         </tr>
                                         <tr>
                                             <td class="fw-semibold text-muted py-1">Validity:</td>
-                                            <td class="fw-bold py-1 text-success">2023 - 2027</td>
+                                            <td class="fw-bold py-1 text-success" id="cardValidity">2023 - 2027</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -232,6 +232,89 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        const DEFAULT_PHOTO_SVG = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="%23800000"><circle cx="50" cy="35" r="20"/><path d="M50 60c-25 0-35 15-35 20v5h70v-5c0-5-10-20-35-20z"/></svg>';
+
+        document.addEventListener("DOMContentLoaded", fetchStudentProfile);
+
+        async function fetchStudentProfile() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const rollNumber = urlParams.get('rollNumber');
+            
+            if (!rollNumber) {
+                alert("No student roll number specified in the URL. Redirecting to dashboard.");
+                window.location.href = 'StudentDashboard.html';
+                return;
+            }
+
+            try {
+                const response = await fetch(`http://localhost:8080/api/students/${encodeURIComponent(rollNumber)}`);
+                if (response.status === 404) {
+                    alert(`Student with Roll Number ${rollNumber} not found. Redirecting to dashboard.`);
+                    window.location.href = 'StudentDashboard.html';
+                    return;
+                }
+                if (!response.ok) throw new Error("Failed to fetch student details");
+                
+                const student = await response.json();
+                populateProfile(student);
+            } catch (error) {
+                console.error("Error loading profile:", error);
+                alert("Could not load student profile. Make sure the backend server is running on http://localhost:8080");
+            }
+        }
+
+        function populateProfile(student) {
+            document.getElementById("profileName").textContent = student.fullName;
+            document.getElementById("profileSubtitle").textContent = `Roll No: ${student.rollNumber} | ${student.branch} Department`;
+            
+            const photoSrc = student.photo && student.photo.trim() !== "" ? student.photo : DEFAULT_PHOTO_SVG;
+            document.getElementById("profileImage").src = photoSrc;
+            document.getElementById("cardImage").src = photoSrc;
+
+            document.getElementById("detailRollNumber").textContent = student.rollNumber;
+            
+            const branchMap = {
+                'CSE': 'Computer Science & Engineering',
+                'ECE': 'Electronics & Communication Engineering',
+                'IT': 'Information Technology',
+                'EEE': 'Electrical & Electronics Engineering',
+                'MECH': 'Mechanical Engineering',
+                'CIVIL': 'Civil Engineering'
+            };
+            document.getElementById("detailBranch").textContent = branchMap[student.branch] || student.branch;
+            document.getElementById("detailEmail").textContent = student.email;
+            document.getElementById("detailMobile").textContent = student.mobile;
+            document.getElementById("detailGender").textContent = student.gender;
+            document.getElementById("detailDob").textContent = formatDate(student.dob);
+            document.getElementById("detailAddress").textContent = student.address;
+
+            document.getElementById("cardName").textContent = student.fullName.toUpperCase();
+            document.getElementById("cardRollNumber").textContent = student.rollNumber;
+            document.getElementById("cardBranch").textContent = student.branch;
+            document.getElementById("cardMobile").textContent = student.mobile;
+            
+            let validityText = "2023 - 2027";
+            if (student.rollNumber && student.rollNumber.length >= 2) {
+                const yearPrefix = student.rollNumber.substring(0, 2);
+                if (/^\d+$/.test(yearPrefix)) {
+                    const startYear = 2000 + parseInt(yearPrefix);
+                    const endYear = startYear + 4;
+                    validityText = `${startYear} - ${endYear}`;
+                }
+            }
+            document.getElementById("cardValidity").textContent = validityText;
+        }
+
+        function formatDate(dateStr) {
+            if (!dateStr) return '';
+            try {
+                const date = new Date(dateStr);
+                return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+            } catch (e) {
+                return dateStr;
+            }
+        }
+
         const themeToggle = document.getElementById('themeToggle');
         const themeIcon = document.getElementById('themeIcon');
 
@@ -246,6 +329,7 @@
             localStorage.setItem('theme', newTheme);
             updateThemeIcon(newTheme);
         });
+
         function updateThemeIcon(theme) {
             if (theme === 'dark') {
                 themeIcon.textContent = '🌙';
