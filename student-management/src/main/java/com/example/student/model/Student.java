@@ -1,12 +1,9 @@
 package com.example.student.model;
-
 import jakarta.persistence.*;
 import java.time.LocalDate;
-
 @Entity
 @Table(name = "students")
 public class Student {
-
     @Id
     @Column(name = "roll_number")
     private String rollNumber;
@@ -29,9 +26,7 @@ public class Student {
     @Column(name = "dob", nullable = false)
     private LocalDate dob;
 
-    @Lob
-    @Column(columnDefinition = "LONGTEXT")
-    private String photo;
+
 
     @Column(nullable = false)
     private String address;
@@ -39,11 +34,8 @@ public class Student {
     @Column(nullable = false)
     private String attendance = "100%";
 
-    // Default constructor
     public Student() {
     }
-
-    // Getters and Setters
     public String getRollNumber() {
         return rollNumber;
     }
@@ -100,13 +92,7 @@ public class Student {
         this.dob = dob;
     }
 
-    public String getPhoto() {
-        return photo;
-    }
 
-    public void setPhoto(String photo) {
-        this.photo = photo;
-    }
 
     public String getAddress() {
         return address;
