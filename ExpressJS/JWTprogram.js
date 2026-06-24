@@ -15,7 +15,6 @@ app.post("/login", (req, res) => {
             SECRET_KEY,
             { expiresIn: "1h" }
         );
-
         res.json({ token });
     } else {
         res.status(401).json({ message: "Invalid Credentials" });
