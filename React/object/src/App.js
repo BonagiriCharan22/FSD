@@ -7,7 +7,9 @@ function App() {
   let [editIndex,setEditIndex]=useState(null);
   let [students,setStudents]=useState(istudents);
   let [search,setSearch]=useState("");
+  // let [ascending,setAscending]=useState(true);
   let [ascending,setAscending]=useState(true);
+
    const handleChage=(e)=>{
     setFormData({...formData,[e.target.name]:e.target.value})
   }
