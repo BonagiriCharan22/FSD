@@ -5,7 +5,6 @@ let istudents = [
   { name: "charan", age: 20, grade: "A", status: "Active" },
   { name: "sai", age: 21, grade: "B", status: "Pending" },
   { name: "kiran", age: 22, grade: "C", status: "Active" },
-  { name: "suresh", age: 23, grade: "D", status: "Pending" },
 ];
 
 function App() {
